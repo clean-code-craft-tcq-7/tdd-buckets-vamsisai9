@@ -32,33 +32,33 @@ class TestCurrentSensor(unittest.TestCase):
 class TestAnotherTenSensor(unittest.TestCase):
     def test_convert_to_current(self):
         # Test case 1: ADC reading of 0
-        a2d_reading = 0
+        adc_reading = 0
         expected_current = 15
-        result = bitToAmpConverter.convert_to_current(a2d_reading)
+        result = bitToAmpConverter.convert_to_current(adc_reading)
         assert result == expected_current, f"Expected {expected_current} but got {result}"
 
         # Test case 2: ADC reading of 1023
-        a2d_reading = 1023
+        adc_reading = 1023
         expected_current = 15
-        result = bitToAmpConverter.convert_to_current(a2d_reading)
+        result = bitToAmpConverter.convert_to_current(adc_reading)
         assert result == expected_current, f"Expected {expected_current} but got {result}"
 
         # Test case 3: ADC reading of 511
-        a2d_reading = 511
+        adc_reading = 511
         expected_current = 0
-        result = bitToAmpConverter.convert_to_current(a2d_reading)
+        result = bitToAmpConverter.convert_to_current(adc_reading)
         assert result == expected_current, f"Expected {expected_current} but got {result}"
 
         # Test case 4: ADC reading of 256
-        a2d_reading = 256
+        adc_reading = 256
         expected_current = 7
-        result = bitToAmpConverter.convert_to_current(a2d_reading)
+        result = bitToAmpConverter.convert_to_current(adc_reading)
         assert result == expected_current, f"Expected {expected_current} but got {result}"
 
         # Test case 5: ADC reading of 767
-        a2d_reading = 767
+        adc_reading = 767
         expected_current = 7
-        result = bitToAmpConverter.convert_to_current(a2d_reading)
+        result = bitToAmpConverter.convert_to_current(adc_reading)
         assert result == expected_current, f"Expected {expected_current} but got {result}"
 
 
