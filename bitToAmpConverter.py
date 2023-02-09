@@ -6,4 +6,4 @@ def convert_to_amps(reading):
 
 def convert_to_current(a2d_reading):
     current = (a2d_reading / 1023) * 30 - 15
-    return abs(current)
+    return round(abs(current))

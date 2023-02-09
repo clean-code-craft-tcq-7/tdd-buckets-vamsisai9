@@ -51,13 +51,13 @@ class TestAnotherTenSensor(unittest.TestCase):
 
         # Test case 4: ADC reading of 256
         a2d_reading = 256
-        expected_current = 7.5
+        expected_current = 7
         result = bitToAmpConverter.convert_to_current(a2d_reading)
         assert result == expected_current, f"Expected {expected_current} but got {result}"
 
         # Test case 5: ADC reading of 767
         a2d_reading = 767
-        expected_current = 11.25
+        expected_current = 7
         result = bitToAmpConverter.convert_to_current(a2d_reading)
         assert result == expected_current, f"Expected {expected_current} but got {result}"
 
